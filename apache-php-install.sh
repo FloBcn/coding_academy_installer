@@ -2,7 +2,12 @@
 
 #install and configure mysql
 sudo apt install mysql-server
+
+#
+# uncomment next line to configure mysql password
+#
 #sudo mysql_secure_installation
+
 
 # install some compilers that may be neccessary
 sudo apt install build-essential
@@ -15,7 +20,7 @@ sudo cp 000-coding.conf /etc/apache2/sites-available/
 sudo mv /etc/apache2/apache2.conf /etc/apache2/apache2.conf_old
 sudo cp apache2.conf /etc/apache2/
 
-# change <homer_dir> for your home directory path in apache configuration files
+# change <home_dir> for your home directory path in apache configuration files
 sudo sed -i "s@<home_dir>@$HOME@g" /etc/apache2/sites-available/000-coding.conf
 sudo sed -i "s@<home_dir>@$HOME@g" /etc/apache2/apache2.conf
 
