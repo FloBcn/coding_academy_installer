@@ -48,9 +48,6 @@
 			vertical-align: baseline;
 			margin-top: 10px;
 		}
-		.rounded-circle {
-			opacity: 0.5;
-		}
 	</style>
 </head>
 <body>
