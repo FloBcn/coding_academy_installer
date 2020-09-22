@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Welcome <username></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<!--
 		---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		links to enable bootstrap in the page
@@ -28,8 +29,9 @@
 			background-image: url('https://media.istockphoto.com/photos/blue-abstract-background-or-texture-picture-id1138395421?k=6&m=1138395421&s=612x612&w=0&h=bJ1SRWujCgg3QWzkGPgaRiArNYohPl7-Wc4p_Fa_cyA=');
 		}
 		h1 {
-			margin-top: 10px;
-			text-align: center;
+			margin-top: 4vw;
+			margin-left: 30vw;
+			
 		}
 		nav {
 			border-radius: 10px;
@@ -42,6 +44,11 @@
 			border-radius: 10px;
 			background-color: rgba(200,200,255,0.2);
 		}
+		.d-flex {
+			vertical-align: baseline;
+			margin-top: 10px;
+		}
+
 	</style>
 </head>
 <body>
@@ -60,9 +67,16 @@
 			</div>
 			<a class="nav-link" href="https://intra.epitech.eu/">Go to the intranet</a>
 		</nav>
-		<?php
-		echo "<h1>Hello <username></h1> "; 
-		?>
+		<div class="d-flex">
+			<div class="">
+				<img class="rounded-circle" style="max-width: 10vw;" src="https://ualmtorres.github.io/SeminarioDockerPresentacion/images/ItWorksOnMyMachine.jpg">
+			</div>
+			<div class="">
+				<?php
+				echo "<h1>Hello <username></h1> "; 
+				?>
+			</div>
+		</div>
 		<div class="container-fluid p-2 mt-2 element" >
 			<?php 
 
