@@ -30,11 +30,17 @@ sudo systemctl restart apache2
 sudo systemctl reload apache2
 
 # create your Rendu directory and add an index.php file to check it works
-cd ~
-mkdir -p Rendu
-chmod 755 Rendu
-greetings="hello $USER"; 
-echo "<?php echo \"<h1>$greetings</h1> \"; " > ~/Rendu/index.php
-echo "echo \"<p>You can edit this file in $HOME/Rendu/index.php</p>\";?>" >> ~/Rendu/index.php
+mkdir -p ~/Rendu
+chmod 755 ~/Rendu
+
+#greetings="hello $USER"; 
+#echo "<?php echo \"<h1>$greetings</h1> \"; " > ~/Rendu/index.php
+#echo "echo \"<p>You can edit this file in $HOME/Rendu/index.php</p>\";?>" >> ~/Rendu/index.php
+
+cp index.php ~/Rendu/index.php
+sudo sed -i "s@username@$USER@g" ~/Rendu/index.php
+
+sudo sed -i "s@<home>@$HOME@g" ~/Rendu/index.php
+
 echo -e "\n\nInstallation complete. Everything should be ready if there was no error"
 echo -e "\n\nYou can check if the server is working by going to 'localhost:80' in your browser\n"
